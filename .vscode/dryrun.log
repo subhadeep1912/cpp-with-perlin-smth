@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/subhadeep19/bruh/emulate_stuff'
+mkdir -p ./bin
+g++ -o src/PerlinNoise.o -c src/PerlinNoise.cpp -std=c++17 -O3 -g -Wall -Wextra -Wpedantic -Wstrict-aliasing -Wno-pointer-arith -Wno-newline-eof -Wno-unused-parameter -Wno-gnu-statement-expression -Wno-gnu-compound-literal-initializer -Wno-gnu-zero-variadic-macro-arguments -Iinclude
+g++ -o src/ppm.o -c src/ppm.cpp -std=c++17 -O3 -g -Wall -Wextra -Wpedantic -Wstrict-aliasing -Wno-pointer-arith -Wno-newline-eof -Wno-unused-parameter -Wno-gnu-statement-expression -Wno-gnu-compound-literal-initializer -Wno-gnu-zero-variadic-macro-arguments -Iinclude
+g++ -o src/glad.o -c src/glad.cpp -std=c++17 -O3 -g -Wall -Wextra -Wpedantic -Wstrict-aliasing -Wno-pointer-arith -Wno-newline-eof -Wno-unused-parameter -Wno-gnu-statement-expression -Wno-gnu-compound-literal-initializer -Wno-gnu-zero-variadic-macro-arguments -Iinclude
+g++ -o src/main.o -c src/main.cpp -std=c++17 -O3 -g -Wall -Wextra -Wpedantic -Wstrict-aliasing -Wno-pointer-arith -Wno-newline-eof -Wno-unused-parameter -Wno-gnu-statement-expression -Wno-gnu-compound-literal-initializer -Wno-gnu-zero-variadic-macro-arguments -Iinclude
+g++ -o bin/emu src/PerlinNoise.o src/ppm.o src/glad.o src/main.o -Llib/ -lglfw3 -lGL -lX11 -lXxf86vm -lXrandr -pthread -lXi -ldl
+make: Leaving directory '/home/subhadeep19/bruh/emulate_stuff'
+ 
